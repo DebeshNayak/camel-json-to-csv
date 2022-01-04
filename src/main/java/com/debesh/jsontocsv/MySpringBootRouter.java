@@ -16,7 +16,10 @@ public class MySpringBootRouter extends RouteBuilder {
 		// Receive from JSON file 
 		from("file:files/input")
 				.log("Received file - ${body}")
-		// transform to CSV format 
+		// transform JSON to CSV format
+				.unmarshal().json()
+
+				.marshal().csv()
 		
 		// Write to output file
 				.log("Writing file - ${body}")

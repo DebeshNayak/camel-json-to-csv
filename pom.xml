@@ -12,7 +12,7 @@
 	<artifactId>json-to-csv</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CamelJsonToCsv</name>
-	<description>Spring Boot project to Strip HTML tags from a text file</description>
+	<description>Spring Boot project to convert CSV to a JSON file using Camel 2.25</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<camel.version>2.25.0</camel.version>
@@ -29,10 +29,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jackson-starter</artifactId>
+			<artifactId>camel-jackson</artifactId>
 			<version>${camel.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-csv</artifactId>
+			<version>${camel.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
